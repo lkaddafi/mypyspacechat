@@ -19,5 +19,5 @@
     "homepage": "https://github.com/lkaddafi/mypyspacechat#readme"
 }
 
-  "main": "src/index.js"
+  "main": "static/js/style.js"
 }
