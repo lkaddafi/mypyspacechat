@@ -1,0 +1,52 @@
+<style type="text/css">
+.submit {
+}
+.inp {
+}
+.css-input {
+}
+.paragraph {
+}
+</style>
+{% extends 'base.html' %} {% block content %}
+
+<form method="post" class="buttons">
+
+  <h3>Chat Room Privé</h3>
+  <div class="infos">
+  <p class="paragraph">Saisissez Votre Nom Et Cliquez Sur<font color="#04A33B"> Créer Nouveau Room</font> Pour En Créer Un Nouveau Room et Générer Votre Code D'accès Unique Pour Le Communiquer A La Personne Avec Laquelle Vous Souhaitez Chatter En Privé, Personne Ne Peut Accéder Ou Voir Ce Qui Se Passe Sur Votre Chat Privé, Si vous Êtes Invité À Rejoindre Un Chat Room Vous Devait Saisir Votre Code D'accès Et Cliquez Sur<font color="#04A33B"> Accédez Au Room</font> Pour Y Accéder. </p><br>
+</div>
+
+<div class="log">
+  <div>
+    <label>Name : </label>
+    <input
+      name="name"
+      type="text" class="css-input"
+      placeholder="🥰❤️‍Saisissez Votre Nom"
+      value="{{name}}"/>
+  </div><br>
+  <div><button type="submit" name="create" class="create-btn">Créer Nouveau Room</button></div><br>
+    <script type="text/javascript">
+          $("input").keypress(function(event) {
+        if (event.keyCode === 13) {
+            $("#send-btn").click();
+        }
+    });
+    </script>
+
+  <div class="join">
+    <input name="code" type="text" class="css-input" placeholder="Saisissez Votre Code MAJU" value="{{code}}" />
+    
+  </div><br>
+  <div><button name="join" type="submit" class="submit">Accédez Au Room</button></div>
+<div style="font-size: 16px;font-weight: normal;"><p>Les Codes Sont Généré en majuscule, il faut faire les saisir en majuscule.<br>Si Vous Êtes Invité A un Chat Room Veuillez Saisir le code D'accés</p></div><br>
+
+</div>
+  {% if error %}
+  <ul>
+    <li>{{error}}</li>
+  </ul>
+  {% endif %}
+</form>
+{% endblock %}
