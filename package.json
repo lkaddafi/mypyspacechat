@@ -17,6 +17,8 @@
         "url": "https://github.com/lkaddafi/mypyspacechat/issues"
     },
     "homepage": "https://github.com/lkaddafi/mypyspacechat#readme"
+    
+    "run": "python3 -m pip install -r requirements.txt"
 
 
 
