@@ -17,4 +17,8 @@
         "url": "https://github.com/lkaddafi/mypyspacechat/issues"
     },
     "homepage": "https://github.com/lkaddafi/mypyspacechat#readme"
+},
+{
+  "main": "src/index.js",
+  ...
 }
