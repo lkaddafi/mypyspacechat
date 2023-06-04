@@ -11,7 +11,7 @@ from string import ascii_uppercase
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "010203"
 socketio = SocketIO(app)
-server = main.server
+server = app.server
 rooms = {}
 
 def generate_unique_code(length):
